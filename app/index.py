@@ -98,4 +98,7 @@ def main():
 
 if __name__ == "__main__":
     radius = Radius()
-    radius.serve(expose=True)
+
+    # To make this accessable to your network (any computer connected to your wifi)
+    # Set `expose=True` instead of False
+    radius.serve(expose=False)

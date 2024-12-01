@@ -141,7 +141,7 @@ class Radius:
         self.ws_loop.run_forever()
 
     def run(self, server_class=RadiusHTTPServer, handler_class=RadiusHandler, lan=False):
-        print(f"{banner}\n")
+        print(banner)
         port = 31415
         if lan:
             address = "0.0.0.0"
@@ -153,7 +153,7 @@ class Radius:
         ws_thread.start()
 
         server_address = (f'{address}', port)
-        print(f"Starting server on http://{address}:{port}")
+        print(f"Radial listening on http://{address}:{port}")
 
         try:
             self.httpd = server_class(server_address, handler_class)
